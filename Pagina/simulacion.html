@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header inicioo">
+        <div class="contenedor">
+            <div class="barra">
+                <a href="/">
+                    <img src="img/logo.jpg" width="150" alt="">
+                </a>
+            </div>
+                <font color="Orange" face="Comic Sans MS,arial">;
+                <h3>Simulación</h3>
+        </div>
+    </header>
+    <label for="formula">Formula:</label>
+    <input type="text" id="formula" name="formula"><br>
+    <label for="cantidad">Cantidad:</label>
+    <input type="int" id="cantidad" name="cantidad"><br>
+
+    <input type="submit" value="Inicio"><br>
+    <input type="submit" value="Balanza"><br>
+    <input type="submit" value="Amasador"><br>
+    <input type="submit" value="Horno"><br>
+
+    <title>Simulación de barra de carga en HTML</title>
+	<style>
+		#barra-carga {
+			background-color: blue;
+			height: 30px;
+			width: 0%;
+			transition: width 0.5s ease-in-out;
+		}
+	</style>
+</head>
+<body>
+	<div id="barra-carga"></div>
+	<script>
+		// Simulación de progreso de la carga
+		var barraCarga = document.getElementById("barra-carga");
+		var porcentaje = 0;
+		var intervalo = setInterval(function() {
+			if (porcentaje < 100) {
+				porcentaje++;
+                barraCarga.style.width = porcentaje + "%";
+			} else {
+				clearInterval(intervalo);
+			}
+		}, 50);
+	</script>
+
+    <header>
+        <footer>
+            <font color="Red" face="Comic Sans MS,arial">
+            <p>Todos los Derechos Reservados &copy;</p>
+        </footer>
+    </header>    
+    
+</body>
+</html>
